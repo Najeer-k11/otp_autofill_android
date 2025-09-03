@@ -22,7 +22,7 @@ class OtpAutofillAndroidPlugin : FlutterPlugin, MethodChannel.MethodCallHandler,
     private var otpReceiver: BroadcastReceiver? = null
 
     override fun onAttachedToEngine(@NonNull binding: FlutterPlugin.FlutterPluginBinding) {
-        channel = MethodChannel(binding.binaryMessenger, "otp_autofill")
+        channel = MethodChannel(binding.binaryMessenger, "otp_autofill_android")
         channel.setMethodCallHandler(this)
     }
 

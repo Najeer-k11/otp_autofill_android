@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'otp_autofill_android_platform_interface.dart';
 
 class OtpAutofillAndroid {
-  static const MethodChannel _channel = MethodChannel('otp_autofill');
+  static const MethodChannel _channel = MethodChannel('otp_autofill_android');
 
   /// Start listening for OTP on Android
   static Future<String?> listenForOtp() async {
