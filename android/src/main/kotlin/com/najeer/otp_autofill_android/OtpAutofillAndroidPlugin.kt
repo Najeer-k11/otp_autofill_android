@@ -1,10 +1,19 @@
 package com.najeer.otp_autofill_android
 
+import android.app.Activity
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
+import android.content.IntentFilter
+import android.os.Bundle
+import java.util.regex.Pattern
+import androidx.annotation.NonNull
+
 import io.flutter.embedding.engine.plugins.FlutterPlugin
+import io.flutter.embedding.engine.plugins.activity.ActivityAware
+import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
-import io.flutter.plugin.common.MethodChannel.MethodCallHandler
-import io.flutter.plugin.common.MethodChannel.Result
 
 /** OtpAutofillAndroidPlugin */
 class OtpAutofillAndroidPlugin : FlutterPlugin, MethodChannel.MethodCallHandler, ActivityAware {
@@ -58,7 +67,15 @@ class OtpAutofillAndroidPlugin : FlutterPlugin, MethodChannel.MethodCallHandler,
         activity = binding.activity
     }
 
-    override fun onDetachedFromActivityForConfigChanges() { activity = null }
-    override fun onReattachedToActivityForConfigChanges(binding: ActivityPluginBinding) { activity = binding.activity }
-    override fun onDetachedFromActivity() { activity = null }
+    override fun onDetachedFromActivityForConfigChanges() {
+        activity = null
+    }
+
+    override fun onReattachedToActivityForConfigChanges(binding: ActivityPluginBinding) {
+        activity = binding.activity
+    }
+
+    override fun onDetachedFromActivity() {
+        activity = null
+    }
 }
