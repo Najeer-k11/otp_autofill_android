@@ -1,7 +1,8 @@
 name: otp_autofill_android
 description: "A Flutter plugin for OTP auto-read on Android (via SMS listener)"
 version: 0.0.1
-homepage:
+homepage: https://github.com/Najeer-k11/otp_autofill_android
+issue_tracker : https://github.com/Najeer-k11/otp_autofill_android/issues
 
 environment:
   sdk: ^3.9.0
